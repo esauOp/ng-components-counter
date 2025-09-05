@@ -1,16 +1,23 @@
 {
-  "name": "count-components",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7"
-  }
+	"name": "count-components",
+	"version": "1.0.0",
+	"description": "Script para analizar y contabilizar componentes de Angular",
+	"main": "count-components.ts",
+	"type": "module",
+	"scripts": {
+		"analyze": "npx tsx count-components.ts",
+		"serve": "npx http-server . -p 8080 -o",
+		"build": "npx tsc count-components.ts --outDir dist --target es2020 --module esnext --moduleResolution node",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"tsx": "^4.7.0",
+		"http-server": "^14.1.1"
+	},
+	"devDependencies": {
+		"@types/node": "^20.10.5",
+		"typescript": "^5.3.3"
+	}
 }
